@@ -1,19 +1,19 @@
 ### Run<br/>
 1. docker-compose run app rails new . --force --database=mysql --skip-bundle
 2. After generating rails structure, goto database.yml
-   Set like, <br/>
-   default: &default
-  adapter: mysql2
-  encoding: utf8mb4
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: <%= ENV['DB_NAME'] %>
-  username: <%= ENV['DB_USER'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-  host: <%= ENV['DB_HOST'] %>
+   Set like, <br/> <br/>
+  default: &default <br/>
+  adapter: mysql2 <br/>
+  encoding: utf8mb4 <br/>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %> <br/>
+  database: <%= ENV['DB_NAME'] %> <br/>
+  username: <%= ENV['DB_USER'] %> <br/>
+  password: <%= ENV['DB_PASSWORD'] %> <br/>
+  host: <%= ENV['DB_HOST'] %> <br/>
 
-  development:
-    <<: *default
-    database: <%= ENV['DB_NAME'] %>
+  development: <br/>
+    <<: *default <br/>
+    database: <%= ENV['DB_NAME'] %> <br/>
 <br/>
 3. docker-compose build <br>
 4. docker-compose up <br/>
