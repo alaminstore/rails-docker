@@ -19,20 +19,23 @@ default: &default
   host: <%= ENV['DB_HOST'] %> 
 ```
 ```
-  development: <br/>
-    <<: *default <br/>
-    database: <%= ENV['DB_NAME'] %> 
+development: <br/>
+  <<: *default <br/>
+  database: <%= ENV['DB_NAME'] %> 
 ```
 <br/>
-Build & Run<br/>
+Build & Run <br/>
 ```
 docker-compose build
 ```
 ```
 docker-compose up
 ```
-view on,<br/>
-```localhost:8080``` <br/>
+view on, <br/>
+```
+localhost:8080
+```
+<br/>
 DONE.
     
            
