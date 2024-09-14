@@ -23,7 +23,6 @@ development: <br/>
   <<: *default <br/>
   database: <%= ENV['DB_NAME'] %> 
 ```
-<br/>
 Build & Run <br/>
 ```
 docker-compose build
