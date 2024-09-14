@@ -29,12 +29,6 @@ Build & Run <br/>
 docker-compose build
 docker-compose up
 ```
-```
-view on <br/>
-```
-localhost:8080
-```
-<br/>
 DONE.
     
            
