@@ -27,8 +27,6 @@ development: <br/>
 Build & Run <br/>
 ```
 docker-compose build
-docker-compose up
 ```
-DONE.
     
            
