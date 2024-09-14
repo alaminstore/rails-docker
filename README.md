@@ -8,21 +8,28 @@
    ```
 4. After generating rails structure, goto database.yml
 Set like, <br/> <br/>
-default: &default <br/>
-  adapter: mysql2 <br/>
-  encoding: utf8mb4 <br/>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %> <br/>
-  database: <%= ENV['DB_NAME'] %> <br/>
-  username: <%= ENV['DB_USER'] %> <br/>
-  password: <%= ENV['DB_PASSWORD'] %> <br/>
-  host: <%= ENV['DB_HOST'] %> <br/>
-
+```
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4 
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %> 
+  database: <%= ENV['DB_NAME'] %> 
+  username: <%= ENV['DB_USER'] %> 
+  password: <%= ENV['DB_PASSWORD'] %> 
+  host: <%= ENV['DB_HOST'] %> 
+```
+```
   development: <br/>
     <<: *default <br/>
-    database: <%= ENV['DB_NAME'] %> <br/>
+    database: <%= ENV['DB_NAME'] %> 
+```
 <br/>
-3. docker-compose build <br>
-4. docker-compose up <br/>
+3. ```
+  docker-compose build
+ ```
+4.```
+docker-compose up
+```
 5. view on, localhost:8080 <br/>
 DONE.
     
