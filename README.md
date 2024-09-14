@@ -27,11 +27,10 @@ development: <br/>
 Build & Run <br/>
 ```
 docker-compose build
-```
-```
 docker-compose up
 ```
-view on, <br/>
+```
+view on <br/>
 ```
 localhost:8080
 ```
