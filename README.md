@@ -24,14 +24,14 @@ default: &default
     database: <%= ENV['DB_NAME'] %> 
 ```
 <br/>
-Build & Run
+Build & Run<br/>
 ```
 docker-compose build
 ```
 ```
 docker-compose up
 ```
-view on, 
+view on,<br/>
 ```localhost:8080``` <br/>
 DONE.
     
