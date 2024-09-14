@@ -6,6 +6,8 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: rails_db_app
       DB_USER: root
+    volumes:
+      - rails_db_data:/var/lib/mysql
     ports:
       - "3307:3306"
     networks:
@@ -17,7 +19,7 @@ services:
     volumes: 
       - ".:/app"
     ports: 
-      - "3001:3000"
+      - "8080:3000"
     depends_on:
       - mysql
     environment:
@@ -27,6 +29,9 @@ services:
       DB_HOST: mysql
     networks:
       - rails_docker
+volumes:
+  rails_db_data:
+    name: "rails_db_data"
 
 networks:
   rails_docker:

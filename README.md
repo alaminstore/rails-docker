@@ -17,6 +17,7 @@ default: &default <br/>
 <br/>
 3. docker-compose build <br>
 4. docker-compose up <br/>
+5. view on, localhost:8080 <br/>
 DONE.
     
            
