@@ -1,13 +1,12 @@
 ### Run<br/>
-1.
 ```
 docker-compose run app rails new . --force --database=mysql --skip-bundle
 ```
-3. In config/environments/development.rb,<br/>
+In config/environments/development.rb,<br/>
 ```
 config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 ```
-4. After generating rails structure, goto database.yml
+After generating rails structure, goto database.yml
 Set like, <br/> <br/>
 ```
 default: &default
@@ -25,11 +24,10 @@ default: &default
     database: <%= ENV['DB_NAME'] %> 
 ```
 <br/>
-3. 
+
 ```
   docker-compose build
  ```
-4. 
 ```
 docker-compose up
 ```
