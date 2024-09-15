@@ -1,6 +1,6 @@
-FROM ruby:3.1.5
+FROM ruby:3.1.5-slim
 
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN apt-get update -qq && apt-get install -y nodejs
 
 WORKDIR /app
 COPY Gemfile Gemfile.lock ./
@@ -13,8 +13,10 @@ COPY . .
 # RUN bundle exec rake assets:precompile
 # RUN bundle exec rake assets:clean
 # RUN bundle exec rake db:migrate
-
+USER 1000 #HERE 1000 is the cmd: id -u or id -g
 EXPOSE 3000
 
 # Configure the main process to run when the container starts
-CMD ["rails", "server", "-b", "0.0.0.0"]
+#CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]
+# CMD ["bundle","exec","puma","-e","development","-C","config/puma.rb"]
