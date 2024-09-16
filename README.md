@@ -2,7 +2,7 @@
 ```
 docker-compose run app rails new . --force --database=mysql --skip-bundle
 ```
-In config/environments/development.rb,<br/>
+path: ```config/environments/development.rb``` <br/>
 ```
 config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 ```
